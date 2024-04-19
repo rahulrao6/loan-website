@@ -1,0 +1,233 @@
+/* Import Google Fonts for a sleek and modern look */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+/* Base settings for colors, fonts, and more */
+:root {
+    --primary-color: #1d3557; /* A deep navy blue, elegant and professional */
+    --background-color: #f1faee; /* A soft off-white for a clean and light background */
+    --accent-color: #e63946; /* A striking red for important accents */
+    --secondary-bg-color: #e0f7fa; /* Lighter teal for better visibility and contrast */
+    --header-bg-color: #457b9d; /* A different shade of blue for the header to stand out */
+    --text-color: #f1faee; /* Soft off-white for text in headers for contrast */
+    --font-primary: 'Roboto', sans-serif; /* Robust and readable for modern web */
+    --border-radius: 12px; /* Gentle rounded corners */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    line-height: 1.7;
+}
+
+/* Universal image and iframe styling for full responsiveness */
+img, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center images and iframes */
+    margin-bottom: 1rem; /* Space below images for captions */
+}
+
+/* Stylish and large headers */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900; /* Bold for emphasis */
+    color: var(--primary-color);
+    text-align: center; /* Center all headings */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.8rem; /* Large for main titles */
+}
+
+h2 {
+    font-size: 2.4rem; /* Substantially large but smaller than h1 */
+}
+
+/* Paragraph styling including captions */
+p {
+    margin-bottom: 1rem;
+    text-align: center; /* Center-aligned paragraphs */
+    font-weight: 400; /* Regular font weight for readability */
+}
+
+/* Specific styling for captions under images */
+
+
+/* Header with a distinct background and text color */
+header {
+    background: var(--header-bg-color);
+    color: var(--text-color);
+    padding: 1.5rem 0;
+    text-align: center; /* Center all header content */
+    box-shadow: var(--box-shadow);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar a {
+    font-weight: 700;
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: var(--accent-color);
+    border-radius: var(--border-radius);
+}
+
+/* Main content area styling */
+.main {
+    max-width: 1100px;
+    margin: 40px auto; /* Center main content and provide ample outer margin */
+    padding: 40px; /* Spacious padding inside */
+    background: var(--secondary-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.section {
+    margin-bottom: 3rem;
+}
+
+/* Footer styled to match header */
+footer {
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 5rem;
+}
+
+/* Responsive adjustments for better usability on all devices */
+@media (max-width: 992px) {
+    h1, h2 { font-size: 2rem; }
+}
+
+@media (max-width: 768px) {
+    body { padding: 10px; }
+    .navbar { flex-direction: column; }
+}
+/* Container for visualizations ensuring everything inside is centered */
+/* General container for all visualizations */
+.visualization {
+    max-width: 1150px;
+    margin: 20px auto; /* Centers the container */
+    padding: 1rem;
+    background-color: var(--secondary-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Specific styling for iframes to ensure they fit and are centered */
+.visualization iframe {
+    width: 100%; /* Full width of the container to be responsive */
+    max-width: 1000px; /* Maximum width can be set to limit stretching */
+    height: 500px; /* Fixed height, adjust as necessary */
+    border: none; /* Removes default border */
+}
+
+/* Styling for captions and descriptive text to avoid overlap */
+figcaption, .visualization p {
+    margin-top: 1rem; /* Space above the text for clear separation */
+    margin-bottom: 1rem; /* Space below the text for clear separation */
+    padding: 0 15px; /* Padding on sides for better text containment */
+    font-size: 0.9rem; /* Smaller font size for captions */
+    text-align: center; /* Ensure text is centered */
+    width: 100%; /* Ensure text spans the full width */
+    max-width: 900px; /* Limit text width to match iframes */
+    font-style: italic; /* Italicize captions for a distinct look */
+}
+
+
+/* Container for the scatterplots ensures they are aligned side by side */
+.scatterplots-container {
+    display: flex;
+    justify-content: space-around; /* Distributes space evenly around the items */
+    align-items: center; /* Aligns items vertically */
+    flex-wrap: wrap; /* Allows plots to wrap on smaller screens if needed */
+    padding: 10px; /* Adds padding inside the container for spacing */
+    margin: 20px 0; /* Vertical space around the scatterplots */
+    background-color: var(--secondary-bg-color); /* Consistent background color */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden; /* Prevents content from spilling out */
+}
+
+/* Styling adjustments for each scatter plot to ensure they don't overflow */
+.scatterplot {
+    flex: 1 1 48%; /* Flex-grow 1, flex-shrink 1, flex-basis 48% */
+    margin: 10px; /* Margin for separation */
+    max-width: 48%; /* Max width to prevent overflow */
+    box-sizing: border-box; /* Includes padding and border in the element's total width */
+}
+
+
+/* Ensure all visualization containers are styled consistently */
+.visualization {
+    max-width: 1150px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: var(--secondary-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ensure the iframe and images do not exceed their containers */
+.visualization img {
+    max-width: 100%;
+    height: auto;
+}
+/* Specific styling for iframes to ensure they fit and are centered */
+.visualization iframe {
+    width: 100%; /* Full width for responsiveness */
+    max-width: 1000px; /* Limits how wide the iframe can go */
+    height: 500px; /* Consistent height */
+    margin: auto; /* Centers the iframe horizontally */
+    display: block; /* Ensures it's treated as a block-level element */
+}
+
+
+/* Paragraph styling for descriptions under visualizations */
+.visualization p, .visualization figcaption {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 992px) {
+    .scatterplots-container {
+        flex-direction: column; /* Stacks the plots vertically on smaller screens */
+    }
+
+    .scatterplot {
+        flex-basis: 100%; /* Each plot takes full width */
+        margin-bottom: 20px; /* Adds space between stacked plots */
+    }
+}
